@@ -8,6 +8,7 @@ body {
     background-color: #121212;
     font-family: 'Roboto', sans-serif;
     color: #e0e0e0;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .columna1, .columna3 {
@@ -100,9 +101,9 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00e676;
+    background-color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 50%;
     cursor: pointer;
     width: 60px;
@@ -173,11 +174,11 @@ button img {
 }
 
 .imagen_h {
+    background-color: white;
     display: flex;
     width: 100px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -187,9 +188,13 @@ button img {
 }
 
 #proyectos {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    text-align: justify;
+    justify-items: center;
     align-items: center;
+    gap: 20px;
 }
 
 .proyectos-container {
@@ -207,17 +212,22 @@ button img {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .proyectos-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 230, 118, 0.7);
+}
+.proyecto3 img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 230, 118, 0.7);
 }
 
 .proyecto1, .proyecto2 {
     display: flex;
+    color: white    ;
     flex-direction: column;
     margin: 10px;
     border: 2px solid #00e676;
@@ -227,7 +237,28 @@ button img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.proyecto1:hover, .proyecto2:hover {
+.proyecto3 {
+    display: flex;
+    width : 299px;
+    height: auto;
+    flex-direction: column;
+    border: 2px solid #00e676;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white ;
+}
+
+.proyecto3 img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto1:hover, .proyecto2:hover ,.proyecto3:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 230, 118, 0.7);
 }
@@ -248,4 +279,9 @@ button img {
     margin: 10px;
     width: 300px;
     height: 330px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
