@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -36,6 +38,7 @@ header, nav, section, footer {
 
 h1, h2, h3 {
     color: #00e676;
+    text-shadow: 0 0 5px rgba(0, 230, 118, 0.5);
 }
 
 nav ul {
@@ -51,6 +54,11 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #00e676;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00c853;
 }
 
 section {
@@ -76,8 +84,16 @@ textarea {
     padding: 10px;
     border: 1px solid #00e676;
     border-radius: 5px;
-    background-color: #121212;
+    background-color: #1e1e1e;
     color: #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #00c853;
+    outline: none;
 }
 
 button {
@@ -122,12 +138,25 @@ button img {
     height: auto;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 230, 118, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen_principal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.7);
 }
 
 .habilidades-lista {
     border: 2px solid #00e676;
-    background-color: transparent;
+    background-color: #1e1e1e;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.habilidades-lista:hover {
+    box-shadow: 0 0 15px rgba(0, 230, 118, 0.7);
 }
 
 .habilidades {
@@ -149,6 +178,12 @@ button img {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen_h:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 230, 118, 0.7);
 }
 
 #proyectos {
@@ -176,9 +211,9 @@ button img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.proyecto1:hover img, .proyecto2:hover img {
+.proyectos-container img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px #00e676;
+    box-shadow: 0 0 15px rgba(0, 230, 118, 0.7);
 }
 
 .proyecto1, .proyecto2 {
@@ -194,7 +229,7 @@ button img {
 
 .proyecto1:hover, .proyecto2:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px #00e676;
+    box-shadow: 0 0 15px rgba(0, 230, 118, 0.7);
 }
 
 .main-content {
