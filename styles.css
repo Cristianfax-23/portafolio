@@ -220,11 +220,6 @@ button img {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 230, 118, 0.7);
 }
-.proyecto3 img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 230, 118, 0.7);
-}
-
 .proyecto1, .proyecto2 {
     display: flex;
     color: white    ;
@@ -250,15 +245,36 @@ button img {
     color: white ;
 }
 
-.proyecto3 img {
-    width: 300px;
+.proyecto4 {
+    display: flex;
+    width : 299px;
     height: auto;
+    flex-direction: column;
+    border: 2px solid #00e676;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white ;
+}
+
+.proyecto3 img {
+    width: 290px;
+    height: 215px;
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.proyecto1:hover, .proyecto2:hover ,.proyecto3:hover {
+.proyecto4 img {
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto1:hover, .proyecto2:hover ,.proyecto3:hover , .proyecto4:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 230, 118, 0.7);
 }
@@ -277,8 +293,8 @@ button img {
     align-items: center;
     justify-content: center;
     margin: 10px;
-    width: 300px;
-    height: 330px;
+    width: 320px;
+    height: 370px;
 }
 
 @keyframes fadeIn {
